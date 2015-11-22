@@ -6,6 +6,7 @@
 #define LOOP_BITMAPS 54
 #define STORE_BITMAP_INDEX 55
 #define CLEAR_LINES 56
+#define END 57
 
 //draw eyes
 #define CIRCLE 49

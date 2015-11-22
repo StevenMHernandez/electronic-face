@@ -54,10 +54,11 @@ void loop() {
         case WRITE:
         {
                 int replace_line = eeprom.next_byte();
-                char string[10] = {0,0,0,0,0,0,0,0,0};
+                char string[20] = {0,0,0,0,0,0,0,0,0};
                 int i = 0;
                 while(isValid(eeprom.check_next_byte())) {
                         string[i] = eeprom.next_byte();
+                        Serial.println(string[i]);
                         i++;
                 }
                 Serial.println(string);
@@ -111,6 +112,12 @@ void loop() {
                         i++;
                 }
                 pause(atol(string));
+        }
+        break;
+        case END:
+        while (eeprom.available())
+        {
+          
         }
         break;
         default:

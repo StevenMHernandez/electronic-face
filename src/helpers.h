@@ -17,10 +17,10 @@ void pause(int time) {
         if (time) {
                 delay(time);
         } else {
-                int i = -1000;
+                int i = -444;
                 Serial.println("waitpad");
-                while (!button.isNewPress()) {
-                        if (i > 1000) {
+                while (!button.isNewPress() && eeprom.available()) {
+                        if (i > 666) {
                                 display.fillTriangle(119, 59, 127, 59, 123, 63, INVERSE);
                                 display.display();
                                 i = 0;

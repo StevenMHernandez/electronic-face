@@ -7,5 +7,5 @@ public:
         void write(char* line);
         void write(char* line, int replace_line);
         void clearLines();
-        char lines[4][11];
+        char lines[4][21];
 };
